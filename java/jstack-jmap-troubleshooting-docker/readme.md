@@ -195,6 +195,15 @@ heapdump arthas-output/dump.hprof
 
 利用诸如Eclipse Memory Analyzer (MAT)等工具分析之前生成的.hprof文件。在MAT中，你可以查看对象的数量、它们的引用关系以及占用的内存大小，通过对比不同时间点的堆转储文件，寻找那些数量显著增加或内存占用持续增长的对象，这些很可能是导致内存泄漏的根源。
 
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+定位到Cache数组
 ```
 
 
