@@ -7,7 +7,7 @@ public class MemoryLeakExample {
     public static void main(String[] args) {
         // 模拟内存泄漏
         while (true) {
-            leakList.add(new byte[1024 * 1024]); // 每次添加1MB对象
+            leakList.add(new byte[1024 * 100]); // 每次添加1MB对象
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {

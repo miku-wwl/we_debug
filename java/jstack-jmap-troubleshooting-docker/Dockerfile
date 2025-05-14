@@ -14,6 +14,7 @@ WORKDIR /troubleshoot
 
 # 复制模拟故障的Java源代码
 COPY src /troubleshoot/src
+COPY arthas-boot.jar /troubleshoot
 
 # 编译Java程序
 RUN mkdir -p /troubleshoot/bin && \
