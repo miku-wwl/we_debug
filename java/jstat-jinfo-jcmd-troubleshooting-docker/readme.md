@@ -77,6 +77,101 @@ heapdump arthas-output/dump.hprof
 # 堆内存溢出
 docker run -it --name troubleshoot-java-heap jstat-jinfo-jcmd-troubleshooting /troubleshoot/stress_scripts/start_services.sh heap-oom
 
+Memory                                used         total        max         usage
+heap                                  217M         220M         968M        22.49%
+g1_eden_space                         3M           5M           -1          60.00%
+g1_old_gen                            212M         212M         968M        21.90%
+g1_survivor_space                     2M           3M           -1          91.16%
+nonheap                               41M          44M          -1          93.79%
+codeheap_'non-nmethods'               1M           2M           5M          30.61%
+metaspace                             30M          31M          -1          98.85%
+codeheap_'profiled_nmethods'          4M           4M           117M        4.14%
+compressed_class_space                3M           3M           1024M       0.35%
+codeheap_'non-profiled_nmethods'      992K         2496K        120036K     0.83%
+mapped                                0K           0K           -           0.00%
+direct                                4M           4M           -           100.00%
+mapped - 'non-volatile memory'        0K           0K           -           0.00%
+[arthas@50062]$ memory
+Memory                                used         total        max         usage
+heap                                  219M         222M         968M        22.70%
+g1_eden_space                         3M           5M           -1          60.00%
+g1_old_gen                            214M         214M         968M        22.11%
+g1_survivor_space                     2M           3M           -1          91.16%
+nonheap                               42M          44M          -1          93.82%
+codeheap_'non-nmethods'               1M           2M           5M          30.61%
+metaspace                             30M          31M          -1          98.81%
+codeheap_'profiled_nmethods'          4M           4M           117M        4.21%
+compressed_class_space                3M           3M           1024M       0.35%
+codeheap_'non-profiled_nmethods'      997K         2496K        120036K     0.83%
+mapped                                0K           0K           -           0.00%
+direct                                4M           4M           -           100.00%
+mapped - 'non-volatile memory'        0K           0K           -           0.00%
+[arthas@50062]$ memory
+Memory                                used         total        max         usage
+heap                                  245M         248M         968M        25.39%
+g1_eden_space                         3M           5M           -1          60.00%
+g1_old_gen                            240M         240M         968M        24.79%
+g1_survivor_space                     2M           3M           -1          91.16%
+nonheap                               42M          44M          -1          93.87%
+codeheap_'non-nmethods'               1M           2M           5M          30.61%
+metaspace                             30M          31M          -1          98.86%
+codeheap_'profiled_nmethods'          4M           5M           117M        4.26%
+compressed_class_space                3M           3M           1024M       0.35%
+codeheap_'non-profiled_nmethods'      1004K        2496K        120036K     0.84%
+mapped                                0K           0K           -           0.00%
+direct                                4M           4M           -           100.00%
+mapped - 'non-volatile memory'        0K           0K           -           0.00%
+[arthas@50062]$ memory
+Memory                                used         total        max         usage
+heap                                  247M         412M         968M        25.53%
+g1_eden_space                         0K           8192K        -1          0.00%
+g1_old_gen                            246M         403M         968M        25.48%
+g1_survivor_space                     512K         1024K        -1          50.01%
+nonheap                               41M          45M          -1          92.93%
+codeheap_'non-nmethods'               1M           2M           5M          30.61%
+metaspace                             30M          31M          -1          98.71%
+codeheap_'profiled_nmethods'          4M           5M           117M        4.02%
+compressed_class_space                3M           3M           1024M       0.35%
+codeheap_'non-profiled_nmethods'      963K         2496K        120036K     0.80%
+mapped                                0K           0K           -           0.00%
+direct                                4M           4M           -           100.00%
+mapped - 'non-volatile memory'        0K           0K           -           0.00%
+[arthas@50062]$ memory
+Memory                                used         total        max         usage
+heap                                  249M         412M         968M        25.73%
+g1_eden_space                         0K           8192K        -1          0.00%
+g1_old_gen                            248M         403M         968M        25.68%
+g1_survivor_space                     512K         1024K        -1          50.01%
+nonheap                               41M          45M          -1          93.08%
+codeheap_'non-nmethods'               1M           2M           5M          30.61%
+metaspace                             30M          31M          -1          98.72%
+codeheap_'profiled_nmethods'          4M           5M           117M        4.07%
+compressed_class_space                3M           3M           1024M       0.35%
+codeheap_'non-profiled_nmethods'      966K         2496K        120036K     0.80%
+mapped                                0K           0K           -           0.00%
+direct                                4M           4M           -           100.00%
+mapped - 'non-volatile memory'        0K           0K           -           0.00%
+[arthas@50062]$ memory
+Memory                                used         total        max         usage
+heap                                  251M         412M         968M        25.94%
+g1_eden_space                         0K           8192K        -1          0.00%
+g1_old_gen                            250M         403M         968M        25.89%
+g1_survivor_space                     512K         1024K        -1          50.01%
+nonheap                               41M          45M          -1          93.15%
+codeheap_'non-nmethods'               1M           2M           5M          30.61%
+metaspace                             30M          31M          -1          98.74%
+codeheap_'profiled_nmethods'          4M           5M           117M        4.09%
+compressed_class_space                3M           3M           1024M       0.35%
+codeheap_'non-profiled_nmethods'      967K         2496K        120036K     0.81%
+mapped                                0K           0K           -           0.00%
+direct                                4M           4M           -           100.00%
+mapped - 'non-volatile memory'        0K           0K           -           0.00%
+
+
+![alt text](image-2.png)
+![alt text](image-3.png)
+
+
 # 元空间溢出
 docker run -it --name troubleshoot-java-metaspace jstat-jinfo-jcmd-troubleshooting /troubleshoot/stress_scripts/start_services.sh metaspace-oom
 
