@@ -77,6 +77,7 @@ heapdump arthas-output/dump.hprof
 # 堆内存溢出
 docker run -it --name troubleshoot-java-heap jstat-jinfo-jcmd-troubleshooting /troubleshoot/stress_scripts/start_services.sh heap-oom
 
+``` shell
 Memory                                used         total        max         usage
 heap                                  217M         220M         968M        22.49%
 g1_eden_space                         3M           5M           -1          60.00%
@@ -166,7 +167,7 @@ codeheap_'non-profiled_nmethods'      967K         2496K        120036K     0.81
 mapped                                0K           0K           -           0.00%
 direct                                4M           4M           -           100.00%
 mapped - 'non-volatile memory'        0K           0K           -           0.00%
-
+```
 
 ![alt text](image-2.png)
 ![alt text](image-3.png)
